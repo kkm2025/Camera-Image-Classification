@@ -1,20 +1,20 @@
 import streamlit as st
-'''
-def add_bg_from_url():
-    st.markdown(
-         f"""
-         <style>
-         .stApp {{
-             background-image: url("https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-preview.jpg");
-             background-attachment: fixed;
-             background-size: cover
-         }}
-         </style>
-         """,
-         unsafe_allow_html=True
-     )
 
-add_bg_from_url() 
+#def add_bg_from_url():
+#    st.markdown(
+#         f"""
+#         <style>
+#         .stApp {{
+#             background-image: url("https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-preview.jpg");
+#             background-attachment: fixed;
+#             background-size: cover
+#         }}
+#         </style>
+#         """,
+#         unsafe_allow_html=True
+#     )
+
+#add_bg_from_url() 
 #https://media.istockphoto.com/illustrations/light-blue-abstract-background-of-stone-wall-illustration-id665098636?k=20&m=665098636&s=612x612&w=0&h=er9yIl5lH2v1dhUpl19cGxsuuZwxx4aF5HSCU1YxTD8=
 #https://images.freecreatives.com/wp-content/uploads/2016/04/Elegant-Solid-Yellow-Backgrounds-.jpg
 '''
