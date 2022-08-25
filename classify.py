@@ -17,7 +17,7 @@ import streamlit as st
 #add_bg_from_url() 
 #https://media.istockphoto.com/illustrations/light-blue-abstract-background-of-stone-wall-illustration-id665098636?k=20&m=665098636&s=612x612&w=0&h=er9yIl5lH2v1dhUpl19cGxsuuZwxx4aF5HSCU1YxTD8=
 #https://images.freecreatives.com/wp-content/uploads/2016/04/Elegant-Solid-Yellow-Backgrounds-.jpg
-'''
+
 from PIL import Image ,ImageOps
 #import PIL
 import tensorflow as tf 
