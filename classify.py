@@ -5,7 +5,7 @@ def add_bg_from_url():
          f"""
          <style>
          .stApp {{
-             background-image: url("https://images.freecreatives.com/wp-content/uploads/2016/04/Elegant-Solid-Yellow-Backgrounds-.jpg");
+             background-image: url("https://c4.wallpaperflare.com/wallpaper/410/867/750/vector-forest-sunset-forest-sunset-forest-wallpaper-preview.jpg");
              background-attachment: fixed;
              background-size: cover
          }}
