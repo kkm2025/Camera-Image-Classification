@@ -71,5 +71,6 @@ with tab2:
     st.caption("Created by Kirankumar Manda")   
 with tab3:
     st.write("Kirankumar Manda")
-
-
+    url = "https://share.streamlit.io/mesmith027/streamlit_webapps/main/MC_pi/streamlit_app.py"
+    st.write("Github (%s)" % url)
+    st.markdown("check out this [link](%s)" % url)
