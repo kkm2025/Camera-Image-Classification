@@ -64,36 +64,37 @@ with tab2:
         size = (224, 224)
         try:
           image = ImageOps.fit(image, size, Image.ANTIALIAS)
+       
+
+             #turn the image into a numpy array
+             image_array = np.asarray(image)
+             # Normalize the image
+             normalized_image_array = (image_array.astype(np.float32) / 127.0) - 1
+
+             # Load the image into the array
+             data[0] = normalized_image_array
+             #test_img = np.array(image).reshape(-1,224,224,3)
+             new_image = image.resize((600, 400))
+             st.image(new_image,caption="Uploaded image")
+             #st.image(image,caption="Uploaded image",use_column_width='auto')
+             if st.button("Predict the Class "):
+                 st.write('')
+                 with st.spinner('Classifying.....'):
+                     time.sleep(4)
+                     #st.success('Done!')
+                 with st.spinner("Almost there..."):
+                     time.sleep(2)
+                 #my_bar = st.progress(0)
+                 #for percent_complete in range(100):
+                 #    time.sleep(0.1)
+                 #    my_bar.progress(percent_complete + 1)
+                 make_prediction = model.predict(data)
+                 label = Labels[np.argmax(make_prediction)]
+                 st.success("The image contains "+ str.lower(label) + " with probability " + str(np.max(make_prediction)*100)[:5]+"%")
+                 st.snow()
+            
         except ValueError as ve:
-          st.warning('The selected image cannot be used for classification due to size issues.Please select any other image', icon="⚠️")
-
-        #turn the image into a numpy array
-        image_array = np.asarray(image)
-        # Normalize the image
-        normalized_image_array = (image_array.astype(np.float32) / 127.0) - 1
-
-        # Load the image into the array
-        data[0] = normalized_image_array
-        #test_img = np.array(image).reshape(-1,224,224,3)
-        new_image = image.resize((600, 400))
-        st.image(new_image,caption="Uploaded image")
-        #st.image(image,caption="Uploaded image",use_column_width='auto')
-        if st.button("Predict the Class "):
-            st.write('')
-            with st.spinner('Classifying.....'):
-                time.sleep(4)
-                #st.success('Done!')
-            with st.spinner("Almost there..."):
-                time.sleep(2)
-            #my_bar = st.progress(0)
-            #for percent_complete in range(100):
-            #    time.sleep(0.1)
-            #    my_bar.progress(percent_complete + 1)
-            make_prediction = model.predict(data)
-            label = Labels[np.argmax(make_prediction)]
-            st.success("The image contains "+ str.lower(label) + " with probability " + str(np.max(make_prediction)*100)[:5]+"%")
-            st.snow()
-    
+            st.warning('The selected image cannot be used for classification due to size issues.Please select any other image', icon="⚠️")
     st.caption("Created by Kirankumar Manda")   
 
     
