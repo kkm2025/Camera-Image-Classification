@@ -35,7 +35,7 @@ with tab1:
 with tab2:
     st.subheader('Classifying Images containing mobile phones and digital camera')
     st.text("For this project mobilenet_v2_050_224 pre-trained model was used")#https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5
-    st.info('This is a purely informational message', icon="ℹ️")
+    st.info("This project can only images with either phone or digital camera.Please upload those images which contains any of these objects.", icon="ℹ️")
     model = tf.keras.models.load_model("mobilenet_last_good_acc.h5",custom_objects={"KerasLayer":hub.KerasLayer})
 
     Labels = ["Digital Camera", "Phone"]
