@@ -34,11 +34,11 @@ with tab1:
     st.write("Image classification is the process of categorizing and labeling groups of pixels or vectors within an image based on specific rules. The categorization law can be devised using one or more spectral or textural characteristics. ")
 with tab2:
     st.subheader('Classifying Images containing mobile phones and digital camera')
-    st.text("For this project mobilenet_v2_050_224 pre-trained model was used")#https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5
+    st.text("For this project Mobilenet_v2_050_224 pre-trained model was used.")#https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5
     model = tf.keras.models.load_model("mobilenet_last_good_acc.h5",custom_objects={"KerasLayer":hub.KerasLayer})
 
     Labels = ["Digital Camera", "Phone"]
-    st.info("Please upload those images which contains any of these objects.", icon="ℹ️")
+    st.info("Please upload those images which contains phone or digital camera.", icon="ℹ️")
     uploaded_file = st.file_uploader("Choose a image ",type=["jpg",'png','jpeg','webp'])
 
     if uploaded_file is not None:
