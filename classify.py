@@ -34,14 +34,14 @@ with tab1:
     st.write("Image classification is the process of categorizing and labeling groups of pixels or vectors within an image based on specific rules. The categorization law can be devised using one or more spectral or textural characteristics. ")
     st.subheader("What is transfer learning?")
     st.write("Transfer learning is a research problem in the field of machine learning. It stores the knowledge gained while solving one problem and applies it to a different but related problem. For example, the knowledge gained while learning to recognize cats could apply when trying to recognize cheetahs. In deep learning, transfer learning is a technique whereby a neural network model is first trained on a problem similar to the problem that is being solved.")
-    
+    st.text("For this project Mobilenet_v2_050_224 pre-trained model was used.")
     
     st.write("Know more about Mobilenet V2 at [link](%s)"%"https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5")
     url = "https://github.com/kkm2025/Camera-Image-Classification"
     st.write("[Project Github Repository](%s)" % url)
 with tab2:
     st.subheader('Classifying Images containing mobile phones and digital camera')
-    st.text("For this project Mobilenet_v2_050_224 pre-trained model was used.")#https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5
+    #https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5
     model = tf.keras.models.load_model("mobilenet_last_good_acc.h5",custom_objects={"KerasLayer":hub.KerasLayer})
 
     Labels = ["Digital Camera", "Phone"]
