@@ -35,7 +35,11 @@ with tab1:
     st.subheader("What is transfer learning?")
     st.write("Transfer learning is a research problem in the field of machine learning. It stores the knowledge gained while solving one problem and applies it to a different but related problem. For example, the knowledge gained while learning to recognize cats could apply when trying to recognize cheetahs. In deep learning, transfer learning is a technique whereby a neural network model is first trained on a problem similar to the problem that is being solved.")
     st.text("For this project Mobilenet_v2_050_224 pre-trained model was used.")
-    
+    st.subheader("MobilenetV2")
+    st.write("
+             MobileNetV2 is a classification model developed by Google. It provides real-time classification capabilities under computing constraints in devices like smartphones. 
+             This implementation leverages transfer learning from ImageNet to your dataset.
+             ")
     st.write("Know more about Mobilenet V2 at [link](%s)"%"https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5")
     url = "https://github.com/kkm2025/Camera-Image-Classification"
     st.write("[Project Github Repository](%s)" % url)
