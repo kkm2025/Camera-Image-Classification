@@ -73,4 +73,3 @@ with tab3:
     st.write("Kirankumar Manda")
 
 
-    st.caption("Created by Kirankumar Manda")
