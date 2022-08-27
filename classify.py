@@ -28,7 +28,7 @@ import numpy as np
 
 
 st.title("Image Classification")
-tab1,tab2 = st.tabs(["Description","Prediction"])
+tab1,tab2,tab3 = st.tabs(["Description","Prediction","Contact Me"])
 with tab1:
     st.image("image_webap.webp")
     st.write("Image classification is the process of categorizing and labeling groups of pixels or vectors within an image based on specific rules. The categorization law can be devised using one or more spectral or textural characteristics. ")
@@ -67,6 +67,9 @@ with tab2:
             make_prediction = model.predict(data)
             label = Labels[np.argmax(make_prediction)]
             st.success("The image contains "+ str.lower(label) + " with probability " + str(np.max(make_prediction)*100)[:5]+"%")
+            
+with tab3:
+    st.write("Hello")
 
 
     st.caption("Created by Kirankumar Manda")
