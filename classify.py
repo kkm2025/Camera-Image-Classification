@@ -26,7 +26,8 @@ import urllib.request
 import numpy as np
 import time
 
-st.markdown("""# Image Classification""")
+#st.markdown("""# Image Classification""")
+st.markdown("<h1 style='text-align: center; color: grey;'>Image Classification</h1>", unsafe_allow_html=True)
 
 tab1,tab2= st.tabs(["About","Prediction"])
 with tab1:
