@@ -27,9 +27,13 @@ import numpy as np
 import time
 
 
-st.title("Image Classification")
+
 tab1,tab2= st.tabs(["About","Prediction"])
 with tab1:
+    col1,col2 = st.columns(2)
+    with col1:
+        st.image("image_class.png")
+        st.title("Image Classification")
     st.image("image_webap.webp")
     st.write("Image classification is the process of categorizing and labeling groups of pixels or vectors within an image based on specific rules. The categorization law can be devised using one or more spectral or textural characteristics. ")
     st.subheader("What is transfer learning?")
