@@ -63,14 +63,14 @@ with tab2:
         #st.image(image,caption="Uploaded image",use_column_width='auto')
         if st.button("Predict the Class "):
             st.write('')
-            #st.write("Classifying....")
-            with st.spinner('Wait for it...'):
-                time.sleep(5)
-                st.success('Done!')
-            my_bar = st.progress(0)
-            for percent_complete in range(100):
-                time.sleep(0.1)
-                my_bar.progress(percent_complete + 1)
+            with st.spinner('Classifying.....'):
+                time.sleep(4)
+                #st.success('Done!')
+            with st.spinner("Almost there...")
+            #my_bar = st.progress(0)
+            #for percent_complete in range(100):
+            #    time.sleep(0.1)
+            #    my_bar.progress(percent_complete + 1)
             make_prediction = model.predict(data)
             label = Labels[np.argmax(make_prediction)]
             st.success("The image contains "+ str.lower(label) + " with probability " + str(np.max(make_prediction)*100)[:5]+"%")
