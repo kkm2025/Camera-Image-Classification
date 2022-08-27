@@ -78,7 +78,7 @@ with tab2:
     
     st.caption("Created by Kirankumar Manda")   
 with tab3:
-    st.write("Kirankumar Manda")
+    st.write("Know more about Mobilenet V2 [link](%s)"%"https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5")
     url = "https://share.streamlit.io/mesmith027/streamlit_webapps/main/MC_pi/streamlit_app.py"
     st.write("[Github](%s)" % url)
     st.markdown("check out this [link](%s)" % url)
