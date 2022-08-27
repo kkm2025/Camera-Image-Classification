@@ -25,9 +25,18 @@ import tensorflow_hub as hub
 import urllib.request
 import numpy as np
 import time
-
-#st.markdown("""# Image Classification""")
-st.markdown("<h1 style='text-align: center;'>Image Classification</h1>", unsafe_allow_html=True)
+st.set_page_config(
+     page_title="Ex-stream-ly Cool App",
+     page_icon="🧊",
+     layout="wide",
+     initial_sidebar_state="expanded",
+     menu_items={
+         'Get Help': 'https://www.extremelycoolapp.com/help',
+         'Report a bug': "https://www.extremelycoolapp.com/bug",
+         'About': "# This is a header. This is an *extremely* cool app!"
+     }
+ )
+st.markdown("""# Image Classification""")
 
 tab1,tab2= st.tabs(["About","Prediction"])
 with tab1:
