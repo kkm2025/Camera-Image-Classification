@@ -43,7 +43,7 @@ with tab1:
              MobileNetV2 is a classification model developed by Google. It provides real-time classification capabilities under computing constraints in devices like smartphones. 
              This implementation leverages transfer learning from ImageNet to your dataset.
              """)
-    st.write("Know more about Mobilenet V2 at [link](%s)"%"https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5")
+    st.write("Know more about Mobilenet V2 at [TensorFlow Hub](%s)"%"https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5")
     url = "https://github.com/kkm2025/Camera-Image-Classification"
     st.write("[Project Github Repository](%s)" % url)
 with tab2:
