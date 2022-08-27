@@ -75,7 +75,6 @@ with tab2:
             make_prediction = model.predict(data)
             label = Labels[np.argmax(make_prediction)]
             st.success("The image contains "+ str.lower(label) + " with probability " + str(np.max(make_prediction)*100)[:5]+"%")
-            st.balloons()
             st.snow()
     
     st.caption("Created by Kirankumar Manda")   
