@@ -91,7 +91,7 @@ with tab2:
             
         except ValueError as ve:
             st.warning('The selected image cannot be used for classification due to size issues.Please select any other image', icon="⚠️")
-    st.caption("Created by ⭐ Kirankumar Manda ⭐")   
+    st.caption("⭐ Created by Kirankumar Manda ⭐")   
 
     
 
