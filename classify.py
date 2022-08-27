@@ -26,7 +26,7 @@ import urllib.request
 import numpy as np
 import time
 
-st.title("Image Classification")
+st.markdown("""***Image Classification***""")
 
 tab1,tab2= st.tabs(["About","Prediction"])
 with tab1:
