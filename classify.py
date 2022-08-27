@@ -19,7 +19,6 @@ import streamlit as st
 #https://images.freecreatives.com/wp-content/uploads/2016/04/Elegant-Solid-Yellow-Backgrounds-.jpg
 
 from PIL import Image ,ImageOps
-#import PIL
 import tensorflow as tf 
 import tensorflow_hub as hub 
 import urllib.request
@@ -84,10 +83,7 @@ with tab2:
                  #st.success('Done!')
              with st.spinner("Almost there..."):
                  time.sleep(2)
-             #my_bar = st.progress(0)
-             #for percent_complete in range(100):
-                 #    time.sleep(0.1)
-                 #    my_bar.progress(percent_complete + 1)
+    
              make_prediction = model.predict(data)
              label = Labels[np.argmax(make_prediction)]
              st.success("The image contains "+ str.lower(label) + " with probability " + str(np.max(make_prediction)*100)[:5]+"%")
