@@ -81,4 +81,4 @@ with tab3:
     st.write("Know more about Mobilenet V2 at [link](%s)"%"https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5")
     url = "https://github.com/kkm2025/Camera-Image-Classification"
     st.write("[Project Github Repository](%s)" % url)
-    st.markdown("check out this [link](%s)" % url)
+
