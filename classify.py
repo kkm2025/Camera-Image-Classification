@@ -63,7 +63,10 @@ with tab2:
         #st.image(image,caption="Uploaded image",use_column_width='auto')
         if st.button("Predict the Class "):
             st.write('')
-            st.write("Classifying....")
+            #st.write("Classifying....")
+            with st.spinner('Wait for it...'):
+                time.sleep(5)
+                st.success('Done!')
             my_bar = st.progress(0)
             for percent_complete in range(100):
                 time.sleep(0.1)
