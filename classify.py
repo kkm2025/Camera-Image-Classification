@@ -34,9 +34,13 @@ st.markdown("""# Image Classification""")
 tab1,tab2= st.tabs(["About","Prediction"])
 with tab1:
     st.image("image_webap.webp")
-    st.write("Image classification is the process of categorizing and labeling groups of pixels or vectors within an image based on specific rules. The categorization law can be devised using one or more spectral or textural characteristics. ")
+    st.markdown("""Image classification is the process of categorizing and labeling groups of pixels or vectors within an image based on specific rules. 
+    The categorization law can be devised using one or more spectral or textural characteristics. """)
     st.subheader("What is transfer learning?")
-    st.write("Transfer learning is a research problem in the field of machine learning. It stores the knowledge gained while solving one problem and applies it to a different but related problem. For example, the knowledge gained while learning to recognize cats could apply when trying to recognize cheetahs. In deep learning, transfer learning is a technique whereby a neural network model is first trained on a problem similar to the problem that is being solved.")
+    st.markdown("""Transfer learning is a research problem in the field of machine learning. It stores the knowledge gained while solving one problem and applies it to 
+             a different but related problem. For example, the knowledge gained while learning to recognize cats could apply when trying to recognize cheetahs. 
+             In deep learning, transfer learning is a technique whereby a neural network model is first trained on a problem similar 
+             to the problem that is being solved.""")
     st.text("For this project Mobilenet_v2_050_224 pre-trained model was used.")
     st.subheader("MobilenetV2")
     st.write("""
@@ -91,7 +95,7 @@ with tab2:
             
         except ValueError as ve:
             st.warning('The selected image cannot be used for classification due to size issues.Please select any other image', icon="⚠️")
-    st.caption("⭐ Created by Kirankumar Manda ⭐")   
+    st.caption(" Created by Kirankumar Manda ")   
 
     
 
