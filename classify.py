@@ -28,40 +28,42 @@ import numpy as np
 
 
 st.title("Image Classification")
-st.subheader('Classifying Images containing mobile phones and digital camera')
-st.text("For this project mobilenet_v2_050_224 pre-trained model was used")#https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5
+tab1,tab2 = st.tabs(["Description","Prediction"])
+with tab2:
+    st.subheader('Classifying Images containing mobile phones and digital camera')
+    st.text("For this project mobilenet_v2_050_224 pre-trained model was used")#https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5
 
-model = tf.keras.models.load_model("mobilenet_last_good_acc.h5",custom_objects={"KerasLayer":hub.KerasLayer})
+    model = tf.keras.models.load_model("mobilenet_last_good_acc.h5",custom_objects={"KerasLayer":hub.KerasLayer})
 
-Labels = ["Digital Camera", "Phone"]
+    Labels = ["Digital Camera", "Phone"]
 
-uploaded_file = st.file_uploader("Choose a image ",type=["jpg",'png','jpeg','webp'])
+    uploaded_file = st.file_uploader("Choose a image ",type=["jpg",'png','jpeg','webp'])
 
-if uploaded_file is not None:
-    image = Image.open(uploaded_file)
-    data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
-    image = image
-    #image sizing
-    size = (224, 224)
-    image = ImageOps.fit(image, size, Image.ANTIALIAS)
-    
-    #turn the image into a numpy array
-    image_array = np.asarray(image)
-    # Normalize the image
-    normalized_image_array = (image_array.astype(np.float32) / 127.0) - 1
+    if uploaded_file is not None:
+        image = Image.open(uploaded_file)
+        data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
+        image = image
+        #image sizing
+        size = (224, 224)
+        image = ImageOps.fit(image, size, Image.ANTIALIAS)
 
-    # Load the image into the array
-    data[0] = normalized_image_array
-    #test_img = np.array(image).reshape(-1,224,224,3)
-    new_image = image.resize((600, 400))
-    st.image(new_image,caption="Uploaded image")
-    #st.image(image,caption="Uploaded image",use_column_width='auto')
-    if st.button("Predict the Class "):
-        st.write('')
-        st.write("Classifying....")
-        make_prediction = model.predict(data)
-        label = Labels[np.argmax(make_prediction)]
-        st.success("The image contains "+ str.lower(label) + " with probability " + str(np.max(make_prediction)*100)[:5]+"%")
+        #turn the image into a numpy array
+        image_array = np.asarray(image)
+        # Normalize the image
+        normalized_image_array = (image_array.astype(np.float32) / 127.0) - 1
 
-        
-st.caption("Created by Kirankumar Manda")
+        # Load the image into the array
+        data[0] = normalized_image_array
+        #test_img = np.array(image).reshape(-1,224,224,3)
+        new_image = image.resize((600, 400))
+        st.image(new_image,caption="Uploaded image")
+        #st.image(image,caption="Uploaded image",use_column_width='auto')
+        if st.button("Predict the Class "):
+            st.write('')
+            st.write("Classifying....")
+            make_prediction = model.predict(data)
+            label = Labels[np.argmax(make_prediction)]
+            st.success("The image contains "+ str.lower(label) + " with probability " + str(np.max(make_prediction)*100)[:5]+"%")
+
+
+    st.caption("Created by Kirankumar Manda")
