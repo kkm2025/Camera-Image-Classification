@@ -74,8 +74,8 @@ with tab2:
             #    my_bar.progress(percent_complete + 1)
             make_prediction = model.predict(data)
             label = Labels[np.argmax(make_prediction)]
-            st.balloons()
             st.success("The image contains "+ str.lower(label) + " with probability " + str(np.max(make_prediction)*100)[:5]+"%")
+            st.balloons()
     
     st.caption("Created by Kirankumar Manda")   
 with tab3:
