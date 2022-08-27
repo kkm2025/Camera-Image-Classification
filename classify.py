@@ -26,9 +26,6 @@ import urllib.request
 import numpy as np
 import time
 
-col1,col2 = st.columns(2)
-with col1:
-st.image("image_class.png")
 st.title("Image Classification")
 
 tab1,tab2= st.tabs(["About","Prediction"])
