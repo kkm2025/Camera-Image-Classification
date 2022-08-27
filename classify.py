@@ -29,7 +29,6 @@ st.set_page_config(
      page_title="Camera Classification",
      page_icon="📷",
      layout="wide",
-     }
  )
 st.markdown("""# Image Classification""")
 
