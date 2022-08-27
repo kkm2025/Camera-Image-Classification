@@ -28,10 +28,13 @@ import time
 
 
 st.title("Image Classification")
-tab1,tab2,tab3 = st.tabs(["Description","Prediction","About"])
+tab1,tab2= st.tabs(["About","Prediction"])
 with tab1:
     st.image("image_webap.webp")
     st.write("Image classification is the process of categorizing and labeling groups of pixels or vectors within an image based on specific rules. The categorization law can be devised using one or more spectral or textural characteristics. ")
+    st.write("Know more about Mobilenet V2 at [link](%s)"%"https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5")
+    url = "https://github.com/kkm2025/Camera-Image-Classification"
+    st.write("[Project Github Repository](%s)" % url)
 with tab2:
     st.subheader('Classifying Images containing mobile phones and digital camera')
     st.text("For this project Mobilenet_v2_050_224 pre-trained model was used.")#https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5
@@ -77,8 +80,6 @@ with tab2:
             st.snow()
     
     st.caption("Created by Kirankumar Manda")   
-with tab3:
-    st.write("Know more about Mobilenet V2 at [link](%s)"%"https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5")
-    url = "https://github.com/kkm2025/Camera-Image-Classification"
-    st.write("[Project Github Repository](%s)" % url)
+
+    
 
