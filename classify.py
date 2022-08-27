@@ -61,8 +61,11 @@ with tab2:
         data = np.ndarray(shape=(1, 224, 224, 3), dtype=np.float32)
         image = image
         #image sizing
-        size = (224, 224,3)
-        image = ImageOps.fit(image, size, Image.ANTIALIAS)
+        size = (224, 224)
+        try:
+          image = ImageOps.fit(image, size, Image.ANTIALIAS)
+        except ValueError as ve:
+          st.warning('The selected image cannot be used for classification due to size issues.Please select any other image', icon="⚠️")
 
         #turn the image into a numpy array
         image_array = np.asarray(image)
