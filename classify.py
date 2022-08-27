@@ -66,7 +66,8 @@ with tab2:
             with st.spinner('Classifying.....'):
                 time.sleep(4)
                 #st.success('Done!')
-            with st.spinner("Almost there...")
+            with st.spinner("Almost there..."):
+                time.sleep(2)
             #my_bar = st.progress(0)
             #for percent_complete in range(100):
             #    time.sleep(0.1)
