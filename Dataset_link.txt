@@ -1,5 +1,5 @@
 The dataset can be accessed through the below link.
 https://drive.google.com/drive/folders/1zuQwH4ckwKpwzGgP1MqcG4aCF0hk0zVP?usp=sharing
 
-The streamlit app can be accesse at below link.
+The streamlit app can be accessed at below link.
 https://kkm2025-camera-image-classification-classify-d1c2wu.streamlitapp.com/
