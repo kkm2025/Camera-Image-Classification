@@ -51,7 +51,7 @@ with tab1:
     url = "https://github.com/kkm2025/Camera-Image-Classification"
     st.write("[Project Github Repository](%s)" % url)
 with tab2:
-    st.subheader('Classifying Images containing mobile phones and digital camera')
+    st.subheader('Classifying Images containing Mobile Phones and Digital Cameras')
     #https://tfhub.dev/google/imagenet/mobilenet_v2_050_224/feature_vector/5
     model = tf.keras.models.load_model("mobilenet_last_good_acc.h5",custom_objects={"KerasLayer":hub.KerasLayer})
 
